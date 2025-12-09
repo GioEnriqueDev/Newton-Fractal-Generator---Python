@@ -59,3 +59,11 @@ Z = X + 1j * Y
 f_z = Z**3 - 1
 f_prime_z = 3 * Z**2
 Z_new = Z - f_z / f_prime_z
+
+
+
+Artistic EnhancementsTo turn a mathematical diagram into art, I implemented a custom shading algorithm:Iteration Tracking: We count how many steps it takes for a point to converge.Logarithmic Depth: depth = 1.0 - np.log(iterations + 1) / np.log(max_iter)Result: Fast-converging areas appear "bright" and elevated, while chaotic boundaries appear "deep" and dark.🚀 Installation & UsageClone the repository:Bashgit clone [https://github.com/GioEnriqueDev/newton_fractal_explorer.git](https://github.com/GioEnriqueDev/newton_fractal_explorer.git)
+cd newton_fractal_explorer
+Install dependencies:Bashpip install -r requirements.txt
+Run the Generator:Bashpython newton_fractal.py
+The script will generate a newton_fractal_4k.png file in the root directory.📊 Performance NotesMethodResolutionTime (Approx)Standard Loops2000x2000~45 secondsNumPy Vectorized2000x2000~1.5 secondsNumPy Vectorized4K (3840x2160)~5.0 secondsHardware: Standard Consumer Laptop CPU.📫 ConnectGio Enrique - LinkedIn ProfileProject Link: https://github.com/GioEnriqueDev/newton_fractal_explorer
